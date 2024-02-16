@@ -16,6 +16,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(morgan('dev'));
 
 // Utiliza el enrutador de productos sin prefijo
-app.use(clothesRouter);
+//app.use(clothesRouter);
 
 export default app;

@@ -1,4 +1,4 @@
-import mongoose from "mongose";
+import mongoose from "mongoose";
 
 mongoose.connect(process.env.DataBase_Conexion)
 .then(db=> console.log("Conexión exitosa a la base de datos Siuuu"))
