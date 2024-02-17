@@ -1,36 +1,36 @@
-import Product from '../models/clothes.model.js'
-const productDAO = {}
+import Clothe from '../models/clothes.model.js'
+const ClotheDAO = {}
 
-productDAO.getAll = async () => {
-    const products = await Product.find();
-    return products;
+ClotheDAO.getAll = async () => {
+    const clothes = await Clothe.find();
+    return clothes;
 }
 
-productDAO.getOne = async (bc) => {
-    const product = await Product.findOne({ barcode: bc });
-    return product
+ClotheDAO.getOne = async (cd) => {
+    const clothe = await Clothe.findOne({ code: cd });
+    return clothe
 };
 
-productDAO.insertProduct = async (product) => {
-    const productSaved = new Product(product);
-    productSaved.save();
+ClotheDAO.insertProduct = async (clothe) => {
+    const clotheSaved = new Clothe(clothe);
+    clotheSaved.save();
     return true;
 }
 
-productDAO.updateProduct = async (bc, product) => {
-    const productUpdated = await Product.findOneAndUpdate({ barcode: bc }, product);
-    if (productUpdated != null)
+ClotheDAO.updateProduct = async (cd, clothe) => {
+    const clotheUpdated = await Clothe.findOneAndUpdate({ code: cd  }, clothe);
+    if (clotheUpdated != null)
         return true;
     else
         return false;
 }
 
-productDAO.delteProduct = async (bc) => {
-    const productDeleted = await Product.findOneAndDelete({ barcode: bc });
-    if (productDeleted != null)
+ClotheDAO.delteProduct = async (cd) => {
+    const clotheDeleted = await Clothe.findOneAndDelete({ code: cd  });
+    if (clotheDeleted != null)
         return true;
     else
         return false;
 }
 
-export default productDAO;
+export default ClotheDAO;
