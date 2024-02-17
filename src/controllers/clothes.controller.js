@@ -1,11 +1,11 @@
 import { model } from 'mongoose';
-import productDAO from '../dao/clothes.dao.js'
+import ClotheDAO from '../dao/clothes.dao.js'
 
 //Nos muestra todos los elementos disponibles en la BD
 export const getAll = (req, res) => {
-    productDAO.getAll()
-        .then((products) => {
-            res.render('../src/views/index',{products});
+    ClotheDAO.getAll()
+        .then((clothes) => {
+            res.render('../src/views/index',{clothes});
         })
         .catch((err) => {
             res.json(err);
@@ -13,10 +13,10 @@ export const getAll = (req, res) => {
 };
 
 export const getOne = (req, res) => {
-    productDAO.getOne(req.params.barcode)
-        .then((product) => {
-            if (product != null)
-            res.render('../src/views/edit',{product});
+    ClotheDAO.getOne(req.params.code)
+        .then((clothe) => {
+            if (clothe != null)
+            res.render('../src/views/edit',{clothes});
             else
                 res.json({ status: "Product not found" })
         })
@@ -25,7 +25,7 @@ export const getOne = (req, res) => {
 
 //Nos muestra todos los elementos disponibles en la BD
 export const insertProduct = (req, res) => {
-    productDAO.insertProduct(req.body)
+    ClotheDAO.insertProduct(req.body)
         .then(result => {
             if (result)
             res.redirect('/')
@@ -35,7 +35,7 @@ export const insertProduct = (req, res) => {
 
 
 export const updateProduct = (req, res) => {
-    productDAO.updateProduct(req.params.barcode, req.body)
+    ClotheDAO.updateProduct(req.params.code, req.body)
 
         .then(product => {
             if (product)
@@ -54,10 +54,10 @@ export const updateProduct = (req, res) => {
 
 
 export const deleteProduct = (req, res) => {
-    productDAO.delteProduct(req.params.barcode)
+    ClotheDAO.delteProduct(req.params.code)
 
-        .then(product => {
-            if (product)
+        .then(clothe => {
+            if (clothe)
             res.redirect('/');
                 else
                 res.json({
