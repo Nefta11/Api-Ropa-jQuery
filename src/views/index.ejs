@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Título de la página</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <!-- Inicio de la primera página -->
+    <div data-role="page" id="foo">
+
+        <div data-role="header" style="overflow:hidden;" data-iconpos="right">
+            <h1>NefSports: Tu Destino para Jerseys de Fútbol Únicos y de Calidad</h1>
+            <a href="#" data-icon="gear" class="ui-btn-right">Options</a>
+            <div data-role="navbar" style="background-color: #9370DB; color: #FFFFFF;">
+                <ul>
+                    <li><a href="#foo" data-icon="home">Home</a></li>
+                    <li><a href="#bar" data-icon="grid">Jerseys</a></li>
+                    <li><a href="#baz" data-icon="info">Three</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div role="main" class="ui-content">
+            <p>Soy la primera en el orden de origen, así que aparezco como la página principal.</p>
+            <p>Ver página interna llamada <a href="#bar">bar</a></p>
+            <p>Ir a la página <a href="#baz">baz</a></p> <!-- Nuevo enlace a la tercera página -->
+
+
+            <section id="about-us">
+                <h2>Sobre Nosotros</h2>
+                <p>Bienvenido a NeftSports, tu destino definitivo para encontrar los mejores jerseys de fútbol. En
+                    NefSports, estamos comprometidos a ofrecerte productos de alta calidad y estilo, satisfaciendo tu
+                    pasión por el fútbol.</p>
+            </section>
+
+
+            <section id="who-we-are">
+                <h2>Quiénes Somos</h2>
+                <p>Somos un equipo apasionado de amantes del fútbol y expertos en moda deportiva. En NeftSports, nos
+                    esforzamos por proporcionar una experiencia de compra única, asegurando la autenticidad de cada
+                    jersey que ofrecemos.</p>
+            </section>
+
+
+            <div id="logo-container">
+                <img src="/imagenes/logo.jpeg" alt="Logo de NeftSports">
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer" class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>Correo: info@neftsports.com</p>
+                    <p>Teléfono: (123) 456-7890</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <p><a href="#" target="_blank">Facebook</a></p>
+                    <p><a href="#" target="_blank">Twitter</a></p>
+                    <p><a href="#" target="_blank">Instagram</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <p><a href="#about-us">Sobre Nosotros</a></p>
+                    <p><a href="#who-we-are">Quiénes Somos</a></p>
+                    <p><a href="#">Términos y Condiciones</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 NeftSports. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div data-role="page" id="bar">
+        <div data-role="header" style="overflow:hidden;" data-iconpos="right">
+            <h1>Playeras de equipos internacionales</h1>
+            <a href="#" data-icon="gear" class="ui-btn-right">Options</a>
+            <div data-role="navbar" style="background-color: #9370DB; color: #FFFFFF;">
+                <ul>
+                    <li><a href="#foo" data-icon="home">Home</a></li>
+                    <li><a href="#bar" data-icon="grid">Jerseys</a></li>
+                    <li><a href="#baz" data-icon="info">Three</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div role="main" class="ui-content">
+
+            <div class="product-row">
+
+                <div class="product-item">
+                    <img src="/imagenes/siuu.jpg" alt="Producto 1">
+                    <h3>Nombre del Producto 1</h3>
+                    <p>Descripción corta del Producto 1.</p>
+                    <p>Precio: $XX.XX</p>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+
+
+                <div class="product-item">
+                    <img src="imagenes/siuu.jpg" alt="Producto 2">
+                    <h3>Nombre del Producto 2</h3>
+                    <p>Descripción corta del Producto 2.</p>
+                    <p>Precio: $YY.YY</p>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+
+
+                <div class="product-item">
+                    <img src="imagenes/siuu.jpg" alt="Producto 3">
+                    <h3>Nombre del Producto 3</h3>
+                    <p>Descripción corta del Producto 3.</p>
+                    <p>Precio: $ZZ.ZZ</p>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+
+
+                <div class="product-item">
+                    <img src="/imagenes/cr7.jpg" alt="Producto 1">
+                    <h3>Nombre del Producto 1</h3>
+                    <p>Descripción corta del Producto 1.</p>
+                    <p>Precio: $XX.XX</p>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+
+
+                <div class="product-item">
+                    <img src="imagenes/cr7.jpg" alt="Producto 2">
+                    <h3>Nombre del Producto 2</h3>
+                    <p>Descripción corta del Producto 2.</p>
+                    <p>Precio: $YY.YY</p>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+
+
+                <div class="product-item">
+                    <img src="imagenes/cr7.jpg" alt="Producto 3">
+                    <h3>Nombre del Producto 3</h3>
+                    <p>Descripción corta del Producto 3.</p>
+                    <p>Precio: $ZZ.ZZ</p>
+                    <a href="#" class="btn-comprar">Comprar</a>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>Correo: info@neftsports.com</p>
+                    <p>Teléfono: (123) 456-7890</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <p><a href="#" target="_blank">Facebook</a></p>
+                    <p><a href="#" target="_blank">Twitter</a></p>
+                    <p><a href="#" target="_blank">Instagram</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <p><a href="#about-us">Sobre Nosotros</a></p>
+                    <p><a href="#who-we-are">Quiénes Somos</a></p>
+                    <p><a href="#">Términos y Condiciones</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 NeftSports. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </div><!-- /page -->
+
+
+
+
+
+    <!-- Inicio de la tercera página -->
+    <div data-role="page" id="baz">
+        <div data-role="header" style="overflow:hidden;" data-iconpos="right">
+            <h1>Pagina TRES</h1>
+            <a href="#" data-icon="gear" class="ui-btn-right">Options</a>
+            <div data-role="navbar" style="background-color: #9370DB; color: #FFFFFF;">
+                <!-- Lila de fondo y texto blanco -->
+                <ul>
+                    <li><a href="#foo" data-icon="home">Home</a></li> <!-- Icono de casa para la primera página -->
+                    <li><a href="#bar" data-icon="grid">Jerseys</a></li>
+                    <!-- Icono de cuadrícula para la segunda página -->
+                    <li><a href="#baz" data-icon="info">Three</a></li>
+                    <!-- Icono de información para la tercera página -->
+                </ul>
+            </div>
+        </div>
+
+
+        <div role="main" class="ui-content">
+            <p>Soy la tercera página recién añadida. ¡Hola desde Baz!</p>
+            <p><a href="#foo">Ir a foo</a></p>
+        </div><!-- /content -->
+
+        <div data-role="footer" class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>Correo: info@neftsports.com</p>
+                    <p>Teléfono: (123) 456-7890</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <p><a href="#" target="_blank">Facebook</a></p>
+                    <p><a href="#" target="_blank">Twitter</a></p>
+                    <p><a href="#" target="_blank">Instagram</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <p><a href="#about-us">Sobre Nosotros</a></p>
+                    <p><a href="#who-we-are">Quiénes Somos</a></p>
+                    <p><a href="#">Términos y Condiciones</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 NeftSports. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </div><!-- /page -->
+</body>
+
+</html>
