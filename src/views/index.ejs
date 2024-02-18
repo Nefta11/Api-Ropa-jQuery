@@ -2,13 +2,13 @@
 <html>
 
 <head>
-    <title>Título de la página</title>
+    <title>NefSports</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/src/css/style.css">
 </head>
 
 <body>
@@ -16,73 +16,65 @@
     <!-- Inicio de la primera página -->
     <div data-role="page" id="foo">
 
-        <div data-role="header" style="overflow:hidden;" data-iconpos="right">
-            <h1>NefSports: Tu Destino para Jerseys de Fútbol Únicos y de Calidad</h1>
-            <a href="#" data-icon="gear" class="ui-btn-right">Options</a>
-            <div data-role="navbar" style="background-color: #9370DB; color: #FFFFFF;">
+        <div data-role="header">
+            <h1>NefSports</h1>
+            <div data-role="navbar">
                 <ul>
-                    <li><a href="#foo" data-icon="home">Home</a></li>
-                    <li><a href="#bar" data-icon="grid">Jerseys</a></li>
-                    <li><a href="#baz" data-icon="info">Three</a></li>
+                    <li><a href="#foo" data-icon="home">Insertar Jerseys</a></li>
+                    <li><a href="#bar" data-icon="eye" class="ui-btn-active">Nuestros Productos</a></li>
+                    <li><a href="#" data-icon="user">Empleados</a></li>
                 </ul>
+                          
             </div>
         </div>
 
 
         <div role="main" class="ui-content">
-            <p>Soy la primera en el orden de origen, así que aparezco como la página principal.</p>
-            <p>Ver página interna llamada <a href="#bar">bar</a></p>
-            <p>Ir a la página <a href="#baz">baz</a></p> <!-- Nuevo enlace a la tercera página -->
-
-
+            <div id="logo-container">
+                <img src="/src/imagenes/logo.jpeg" alt="Logo de NeftSports">
+            </div>
             <section id="about-us">
                 <h2>Sobre Nosotros</h2>
                 <p>Bienvenido a NeftSports, tu destino definitivo para encontrar los mejores jerseys de fútbol. En
                     NefSports, estamos comprometidos a ofrecerte productos de alta calidad y estilo, satisfaciendo tu
                     pasión por el fútbol.</p>
             </section>
-
-
-            <section id="who-we-are">
-                <h2>Quiénes Somos</h2>
-                <p>Somos un equipo apasionado de amantes del fútbol y expertos en moda deportiva. En NeftSports, nos
-                    esforzamos por proporcionar una experiencia de compra única, asegurando la autenticidad de cada
-                    jersey que ofrecemos.</p>
-            </section>
-
-
-            <div id="logo-container">
-                <img src="/imagenes/logo.jpeg" alt="Logo de NeftSports">
-            </div>
-        </div><!-- /content -->
-
-        <div data-role="footer" class="footer">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Contacto</h4>
-                    <p>Correo: info@neftsports.com</p>
-                    <p>Teléfono: (123) 456-7890</p>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Síguenos</h4>
-                    <p><a href="#" target="_blank">Facebook</a></p>
-                    <p><a href="#" target="_blank">Twitter</a></p>
-                    <p><a href="#" target="_blank">Instagram</a></p>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Enlaces Rápidos</h4>
-                    <p><a href="#about-us">Sobre Nosotros</a></p>
-                    <p><a href="#who-we-are">Quiénes Somos</a></p>
-                    <p><a href="#">Términos y Condiciones</a></p>
-                </div>
+            <form action="/" method="post">
+                <input type="text" name="code" placeholder="Código de barras">
+                <input type="text" name="team" placeholder="Equipo">
+                <input type="number" name="price" placeholder="Precio de compra">
+                <input type="text" name="size" placeholder="Talla">
+                <input type="text" name="color" placeholder="Color">
+                <input type="number" name="stock" placeholder="Existencia">
+                <input type="date" name="releaseDate" placeholder="Fecha de lanzamiento">
+                <label for="flip-2">Activo:</label>
+                <select name="status" id="flip-2" data-role="slider">
+                    <option value="0">No</option>
+                    <option value="1">Sí</option>
+                </select>
+                <button type="submit" id="submit-6" class="ui-shadow ui-btn ui-corner-all ui-mini">Guardar</button>
+            </form>
+                        
             </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2024 NeftSports. Todos los derechos reservados.</p>
+            <div data-role="footer" style="text-align: center;">
+                <h5>Developed by NeftaSiu</h5>
+            
+                <!-- Contenedor para centrar los enlaces -->
+                <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+            
+                    <!-- Enlace a GitHub -->
+                    <a href="https://github.com/Nefta11" target="_blank">
+                        <img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=fff&style=flat" alt="GitHub Badge">
+                    </a>
+            
+                    <!-- Enlace a Instagram -->
+                    <a href="https://www.instagram.com/nefth_07/" target="_blank">
+                        <img src="https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=fff&style=flat" alt="Instagram Badge">
+                    </a>
+            
+                </div>
             </div>
-        </div>
     </div>
 
 
@@ -90,17 +82,16 @@
 
 
 
-
     <div data-role="page" id="bar">
-        <div data-role="header" style="overflow:hidden;" data-iconpos="right">
-            <h1>Playeras de equipos internacionales</h1>
-            <a href="#" data-icon="gear" class="ui-btn-right">Options</a>
-            <div data-role="navbar" style="background-color: #9370DB; color: #FFFFFF;">
+        <div data-role="header">
+            <h1>NefSports</h1>
+            <div data-role="navbar">
                 <ul>
-                    <li><a href="#foo" data-icon="home">Home</a></li>
-                    <li><a href="#bar" data-icon="grid">Jerseys</a></li>
-                    <li><a href="#baz" data-icon="info">Three</a></li>
+                    <li><a href="#foo" data-icon="home">Insertar Jerseys</a></li>
+                    <li><a href="#bar" data-icon="eye" class="ui-btn-active">Nuestros Productos</a></li>
+                    <li><a href="#" data-icon="user">Empleados</a></li>
                 </ul>
+                          
             </div>
         </div>
 
@@ -111,7 +102,7 @@
             <div class="product-row">
 
                 <div class="product-item">
-                    <img src="/imagenes/siuu.jpg" alt="Producto 1">
+                    <img src="/src/imagenes/siuu.jpg" alt="Producto 1">
                     <h3>Nombre del Producto 1</h3>
                     <p>Descripción corta del Producto 1.</p>
                     <p>Precio: $XX.XX</p>
@@ -120,7 +111,7 @@
 
 
                 <div class="product-item">
-                    <img src="imagenes/siuu.jpg" alt="Producto 2">
+                    <img src="/src/imagenes/siuu.jpg"" alt="Producto 2">
                     <h3>Nombre del Producto 2</h3>
                     <p>Descripción corta del Producto 2.</p>
                     <p>Precio: $YY.YY</p>
@@ -129,7 +120,7 @@
 
 
                 <div class="product-item">
-                    <img src="imagenes/siuu.jpg" alt="Producto 3">
+                    <img src="/src/imagenes/siuu.jpg"" alt="Producto 3">
                     <h3>Nombre del Producto 3</h3>
                     <p>Descripción corta del Producto 3.</p>
                     <p>Precio: $ZZ.ZZ</p>
@@ -138,7 +129,7 @@
 
 
                 <div class="product-item">
-                    <img src="/imagenes/cr7.jpg" alt="Producto 1">
+                    <img src="/src/imagenes/cr7.jpg" alt="Producto 1">
                     <h3>Nombre del Producto 1</h3>
                     <p>Descripción corta del Producto 1.</p>
                     <p>Precio: $XX.XX</p>

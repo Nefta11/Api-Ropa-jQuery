@@ -11,13 +11,13 @@ ClotheDAO.getOne = async (cd) => {
     return clothe
 };
 
-ClotheDAO.insertProduct = async (clothe) => {
+ClotheDAO.insertClothe = async (clothe) => {
     const clotheSaved = new Clothe(clothe);
     clotheSaved.save();
     return true;
 }
 
-ClotheDAO.updateProduct = async (cd, clothe) => {
+ClotheDAO.updateClothe = async (cd, clothe) => {
     const clotheUpdated = await Clothe.findOneAndUpdate({ code: cd  }, clothe);
     if (clotheUpdated != null)
         return true;
@@ -25,7 +25,7 @@ ClotheDAO.updateProduct = async (cd, clothe) => {
         return false;
 }
 
-ClotheDAO.delteProduct = async (cd) => {
+ClotheDAO.delteClothe = async (cd) => {
     const clotheDeleted = await Clothe.findOneAndDelete({ code: cd  });
     if (clotheDeleted != null)
         return true;

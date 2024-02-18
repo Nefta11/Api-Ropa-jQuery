@@ -1,0 +1,117 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del encabezado */
+[data-role="header"] {
+    background-color: #9370DB; /* Lila */
+    color: #FFFFFF; /* Texto blanco */
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del contenido principal */
+.ui-content {
+    padding: 20px;
+}
+
+/* Estilos de la sección "Sobre Nosotros" y "Quiénes Somos" */
+#about-us,
+#who-we-are {
+    margin-bottom: 30px;
+}
+
+/* Estilos del logo de la empresa */
+#logo-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#logo-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos del pie de página */
+.footer {
+    background-color: #333; /* Color de fondo del pie de página */
+    color: #FFF; /* Texto blanco */
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-section {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Estilos de la barra de navegación */
+[data-role="navbar"] {
+    background-color: #9370DB; /* Lila */
+    color: #FFFFFF; /* Texto blanco */
+    border: none;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+[data-role="navbar"] a {
+    color: #FFFFFF; /* Texto blanco */
+}
+
+/* Estilos de los enlaces en el contenido */
+.ui-content a {
+    color: #9370DB; /* Lila */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.ui-content a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Estilos para el catálogo de productos */
+.product-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-item {
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.btn-comprar {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #9370DB;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-comprar:hover {
+    background-color: #63409E;
+}
