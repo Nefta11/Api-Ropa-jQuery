@@ -29,15 +29,18 @@
 
 
         <div role="main" class="ui-content">
-            <div id="logo-container">
-                <img src="/src/public/imagenes/logo.jpeg" alt="Logo de NeftSports">
+            <h4 style="text-align: center;">"Tu Destino para Jerseys de Fútbol Únicos y de Calidad"</h4>
+            <div id="logo-container" style="text-align: center; margin-top: 20px;">
+                <img style="max-width: 80%; height: auto; border-radius: 20px;" src="https://github.com/Nefta11/Api-Ropa-jQuery/raw/main/src/public/imagenes/logo.jpeg" alt="Logo de NeftSports">
             </div>
+                        
             <section id="about-us">
-                <h2>Sobre Nosotros</h2>
+                <h3>Sobre Nosotros</h3>
                 <p>Bienvenido a NeftSports, tu destino definitivo para encontrar los mejores jerseys de fútbol. En
                     NefSports, estamos comprometidos a ofrecerte productos de alta calidad y estilo, satisfaciendo tu
                     pasión por el fútbol.</p>
             </section>
+            <div><h3>Inserta nuevos productos:</h3></div>
             <form action="/" method="post">
                 <input type="text" name="urlImg" placeholder="URL de la imagen">
                 <input type="text" name="code" placeholder="Código de barras">
@@ -46,7 +49,7 @@
                 <input type="text" name="size" placeholder="Talla">
                 <input type="text" name="color" placeholder="Color">
                 <input type="number" name="stock" placeholder="Existencia">
-                <input type="String" name="season" placeholder="Temporada:">
+                <input type="text" name="season" placeholder="Temporada">
                 <label for="flip-2">Activo:</label>
                 <select name="status" id="flip-2" data-role="slider">
                     <option value="0">No</option>
@@ -122,8 +125,8 @@
                         <p style="line-height: 1;">Temporada: <%= clothe.season %></p>
                         <p style="line-height: 1;">Activo: <%= clothe.status === 1 ? 'Sí' : 'No' %></p>
                         <div style="display: flex; justify-content: center;">
-                            <button style="font-size: 7px; border-radius: 10px; padding: 5px 10px; margin-right: 5px;" href="/De/<%= clothe.code%>" >Eliminar</button>
-                            <button style="font-size: 7px; border-radius: 10px; padding: 5px 10px;" href="/<%= clothe.code%>" >Editar</button>
+                            <a style="font-size: 7px; border-radius: 10px; padding: 5px 10px; margin-right: 5px;" href="/De/<%= clothe.code%>" >Eliminar</a>
+                            <a style="font-size: 7px; border-radius: 10px; padding: 5px 10px;" href="/<%= clothe.code%>" >Editar</a>
                         </div>
                     </div>
                 <% }); %>

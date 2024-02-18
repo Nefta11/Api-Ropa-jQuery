@@ -25,7 +25,7 @@ ClotheDAO.updateClothe = async (cd, clothe) => {
         return false;
 }
 
-ClotheDAO.delteClothe = async (cd) => {
+ClotheDAO.deleteClothe = async (cd) => {
     const clotheDeleted = await Clothe.findOneAndDelete({ code: cd  });
     if (clotheDeleted != null)
         return true;
