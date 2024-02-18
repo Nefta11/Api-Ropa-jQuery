@@ -30,31 +30,35 @@
 
 
         <div role="main" class="ui-content">
-            <div id="logo-container">
-                <img src="/src/public/imagenes/logo.jpeg" alt="Logo de NeftSports">
-            </div>
-            <section id="about-us">
-                <h2>Sobre Nosotros</h2>
-                <p>Bienvenido a NeftSports, tu destino definitivo para encontrar los mejores jerseys de fútbol. En
-                    NefSports, estamos comprometidos a ofrecerte productos de alta calidad y estilo, satisfaciendo tu
-                    pasión por el fútbol.</p>
-            </section>
-            <form action="/" method="post">
-                <input type="text" name="urlImg" placeholder="URL de la imagen">
-                <input type="text" name="code" placeholder="Código de barras">
-                <input type="text" name="team" placeholder="Equipo">
-                <input type="number" name="price" placeholder="Precio de compra">
-                <input type="text" name="size" placeholder="Talla">
-                <input type="text" name="color" placeholder="Color">
-                <input type="number" name="stock" placeholder="Existencia">
-                <input type="date" name="releaseDate" placeholder="Fecha de lanzamiento">
+        <h2>Editar Los productos</h2>
+        <div data-role="content">
+            <form action="/<%= clothe.code %>" method="post">
+                <h4>
+                    <%= clothe.team %>
+                </h4>
+                <input type="text" name="urlImg" placeholder="URL de la imagen" value="<%= product.urlImg %>">
+                <input type="text" name="code" placeholder="Código de barras" value="<%= product.code %>">
+                <input type="text" name="team" placeholder="Equipo" value="<%= product.team %>">
+                <input type="number" name="price" placeholder="Precio de compra" value="<%= product.price %>">
+                <input type="text" name="size" placeholder="Talla" value="<%= product.size %>">
+                <input type="text" name="color" placeholder="Color" value="<%= product.color %>">
+                <input type="number" name="stock" placeholder="Existencia" value="<%= product.stock %>">
+                <input type="text" name="season" placeholder="Temporada" value="<%= product.season %>">
                 <label for="flip-2">Activo:</label>
                 <select name="status" id="flip-2" data-role="slider">
-                    <option value="0">No</option>
-                    <option value="1">Sí</option>
+                    <option value="0" <%= product.status === 0 ? "selected" : "" %>>No</option>
+                    <option value="1" <%= product.status === 1 ? "selected" : "" %>>Sí</option>
                 </select>
-                <button type="submit" id="submit-6" class="ui-shadow ui-btn ui-corner-all ui-mini">Guardar</button>
+                <button type="submit" id="submit-6" class="ui-shadow ui-btn ui-corner-all ui-mini">Actualizar</button>
+        
+                <li>
+                    <a href="/" class="ui-btn">Cancelar</a>
+                </li>
             </form>
+        </div>
+        
+            </div>
+            
             
                         
             </div>
