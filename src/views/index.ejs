@@ -125,9 +125,10 @@
                         <p style="line-height: 1;">Temporada: <%= clothe.season %></p>
                         <p style="line-height: 1;">Activo: <%= clothe.status === 1 ? 'Sí' : 'No' %></p>
                         <div style="display: flex; justify-content: center;">
-                            <a style="font-size: 7px; border-radius: 10px; padding: 5px 10px; margin-right: 5px;" href="/De/<%= clothe.code%>" >Eliminar</a>
-                            <a style="font-size: 7px; border-radius: 10px; padding: 5px 10px;" href="/<%= clothe.code%>" >Editar</a>
+                            <button style="font-size: 7px; border-radius: 10px; padding: 5px 10px; margin-right: 5px;" onclick="window.location.href='/De/<%= clothe.code%>'">Eliminar</button>
+                            <button style="font-size: 7px; border-radius: 10px; padding: 5px 10px;" onclick="window.location.href='/<%= clothe.code%>'">Editar</button>
                         </div>
+                        
                     </div>
                 <% }); %>
             </div>

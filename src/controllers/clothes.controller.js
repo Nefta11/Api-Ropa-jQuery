@@ -16,7 +16,7 @@ export const getOne = (req, res) => {
     ClotheDAO.getOne(req.params.code)
         .then((clothe) => {
             if (clothe != null)
-            res.render('../src/views/edit',{clothes});
+            res.render('../src/views/edit',{clothe});
             else
                 res.json({ status: "Product not found" })
         })
