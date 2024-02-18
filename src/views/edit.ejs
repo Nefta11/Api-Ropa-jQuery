@@ -22,6 +22,7 @@
                 <ul>
                     <li><a href="#foo" data-icon="home">Insertar Jerseys</a></li>
                     <li><a href="#bar" data-icon="eye" class="ui-btn-active">Nuestros Productos</a></li>
+                    <li><a href="#" data-icon="user">Empleados</a></li>
                 </ul>
                           
             </div>
@@ -88,77 +89,6 @@
                 </div>
             </div>
     </div>
-
-
-
-
-
-
-    <div data-role="page" id="bar" data-theme="b">
-        <div data-role="header">
-            <h1>NefSports</h1>
-            <div data-role="navbar">
-                <ul>
-                    <li><a href="#foo" data-icon="home">Insertar Jerseys</a></li>
-                    <li><a href="#bar" data-icon="eye" class="ui-btn-active">Nuestros Productos</a></li>
-                </ul>
-                          
-            </div>
-        </div>
-
-
-
-        <div role="main" class="ui-content">
-
-            <div class="product-row" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-
-                <% clothes.forEach((clothe) => { %>
-                    <div class="product-item" style="width: 30%; margin-bottom: 20px;  font-size: 10px; background-color: rgb(189, 187, 185); color: #000;">
-                        <img style="width: 100px; height: 85px; margin-bottom: 10px;" src="<%= clothe.urlImg %>" alt="<%= clothe.description %>">
-                        <p style="line-height: 1;">Equipo: <%= clothe.team %></p>
-                        <p style="line-height: 1;">Precio: $<%= clothe.price.toFixed(2) %></p>
-                        <p style="line-height: 1;">Talla: <%= clothe.size %></p>
-                        <p style="line-height: 1;">Color: <%= clothe.color %></p>
-                        <p style="line-height: 1;">Existencia: <%= clothe.stock %></p>
-                        <p style="line-height: 1;">Fecha de lanzamiento: <%= clothe.releaseDate %></p>
-                        <p style="line-height: 1;">Activo: <%= clothe.status === 1 ? 'Sí' : 'No' %></p>
-                        <a href="#" class="btn-comprar">Comprar</a>
-                    </div>
-                <% }); %>
-                
-
-            </div>
-        </div>
-        <div data-role="footer" style="text-align: center;">
-            <h5>Developed by NeftaSiu</h5>
-        
-            <!-- Contenedor para centrar los enlaces -->
-            <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-
-                <a href="https://www.facebook.com/profile.php?id=100008252550294" target="_blank">
-                    <img src="https://img.shields.io/badge/Facebook-1877F2?logo=facebook&logoColor=fff&style=flat"
-                        alt="Facebook Badge">
-                </a>
-        
-                <!-- Enlace a GitHub -->
-                <a href="https://github.com/Nefta11" target="_blank">
-                    <img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=fff&style=flat" alt="GitHub Badge">
-                </a>
-        
-                <!-- Enlace a Instagram -->
-                <a href="https://www.instagram.com/nefth_07/" target="_blank">
-                    <img src="https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=fff&style=flat" alt="Instagram Badge">
-                </a>
-                
-                <a href="mailto:neftaliarturohernandez@gmail.com" target="_blank">
-                    <img src="https://img.shields.io/badge/Gmail-EA4335?logo=gmail&logoColor=fff&style=flat" alt="Gmail Badge">
-                </a>
-            </div>
-            <div class="footer-bottom" style="text-align: center; margin-top: 10px;">
-                <p>&copy; 2024 NeftSports. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </div><!-- /page -->
 
 </body>
 
