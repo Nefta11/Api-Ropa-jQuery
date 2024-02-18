@@ -46,7 +46,7 @@
                 <input type="text" name="size" placeholder="Talla">
                 <input type="text" name="color" placeholder="Color">
                 <input type="number" name="stock" placeholder="Existencia">
-                <input type="date" name="releaseDate" placeholder="Fecha de lanzamiento">
+                <input type="String" name="season" placeholder="Temporada:">
                 <label for="flip-2">Activo:</label>
                 <select name="status" id="flip-2" data-role="slider">
                     <option value="0">No</option>
@@ -112,14 +112,14 @@
 
             <div class="product-row" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
                 <% clothes.forEach((clothe) => { %>
-                    <div class="product-item" style="width:45%; margin-bottom: 20px; font-size: 10px; border-radius: 15px; background-color: rgb(194, 158, 206); color: #000; text-align: center; position: relative;">
-                        <img style="width: 100px; border-radius: 10px; height: 85px; margin-bottom: 10px;" src="<%= clothe.urlImg %>" alt="<%= clothe.description %>">
+                    <div class="product-item" style="width:45%; margin-bottom: 20px; font-size: 11px; border-radius: 15px; background-color: rgb(194, 158, 206); color: #000; text-align: center; position: relative;">
+                        <img style="width: 100px; border-radius: 5px; height: 85px; margin-bottom: 10px;" src="<%= clothe.urlImg %>" alt="<%= clothe.description %>">
                         <p style="line-height: 1;">Equipo: <%= clothe.team %></p>
                         <p style="line-height: 1;">Precio: $<%= clothe.price.toFixed(2) %></p>
                         <p style="line-height: 1;">Talla: <%= clothe.size %></p>
                         <p style="line-height: 1;">Color: <%= clothe.color %></p>
                         <p style="line-height: 1;">Existencia: <%= clothe.stock %></p>
-                        <p style="line-height: 1;">Fecha de lanzamiento: <%= clothe.releaseDate %></p>
+                        <p style="line-height: 1;">Temporada: <%= clothe.season %></p>
                         <p style="line-height: 1;">Activo: <%= clothe.status === 1 ? 'Sí' : 'No' %></p>
                         <div style="display: flex; justify-content: center;">
                             <button style="font-size: 7px; border-radius: 10px; padding: 5px 10px; margin-right: 5px;" href="/De/<%= clothe.code%>" >Eliminar</button>
