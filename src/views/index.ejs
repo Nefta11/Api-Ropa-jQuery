@@ -9,6 +9,7 @@
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" href="/src/public/css/style.css">
+    
 </head>
 
 <body>
@@ -20,8 +21,7 @@
             <h1>NefSports</h1>
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#foo" data-icon="home">Insertar Jerseys</a></li>
-                    <li><a href="#bar" data-icon="eye" class="ui-btn-active">Nuestros Productos</a></li>
+                    <li><a>Inserta Productos</a></li>
                 </ul>
                           
             </div>
@@ -33,13 +33,7 @@
             <div id="logo-container" style="text-align: center; margin-top: 20px;">
                 <img style="max-width: 80%; height: auto; border-radius: 20px;" src="https://github.com/Nefta11/Api-Ropa-jQuery/raw/main/src/public/imagenes/logo.jpeg" alt="Logo de NeftSports">
             </div>
-                        
-            <section id="about-us">
-                <h3>Sobre Nosotros</h3>
-                <p>Bienvenido a NeftSports, tu destino definitivo para encontrar los mejores jerseys de fútbol. En
-                    NefSports, estamos comprometidos a ofrecerte productos de alta calidad y estilo, satisfaciendo tu
-                    pasión por el fútbol.</p>
-            </section>
+                    
             <div><h3>Inserta nuevos productos:</h3></div>
             <form action="/" method="post">
                 <input type="text" name="urlImg" placeholder="URL de la imagen">
@@ -57,7 +51,39 @@
                 </select>
                 <button type="submit" id="submit-6" class="ui-shadow ui-btn ui-corner-all ui-mini">Guardar</button>
             </form>
+            <div data-role="header">
+                <h1>NefSports</h1>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a>Nuestros Productos</a></li>
+                    </ul>
+                              
+                </div>
+            </div>
+        <div role="main" class="ui-content">
+
+            <div class="product-row" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+                <% clothes.forEach((clothe) => { %>
+                    <div class="product-item" style="width:45%; margin-bottom: 20px; font-size: 11px; border-radius: 15px; background-color: rgb(194, 158, 206); color: #000; text-align: center; position: relative;">
+                        <img style="width: 100px; border-radius: 5px; height: 85px; margin-bottom: 10px;" src="<%= clothe.urlImg %>" alt="<%= clothe.description %>">
+                        <p style="line-height: 1;">Equipo: <%= clothe.team %></p>
+                        <p style="line-height: 1;">Precio: $<%= clothe.price.toFixed(2) %></p>
+                        <p style="line-height: 1;">Talla: <%= clothe.size %></p>
+                        <p style="line-height: 1;">Color: <%= clothe.color %></p>
+                        <p style="line-height: 1;">Existencia: <%= clothe.stock %></p>
+                        <p style="line-height: 1;">Temporada: <%= clothe.season %></p>
+                        <p style="line-height: 1;">Activo: <%= clothe.status === 1 ? 'Sí' : 'No' %></p>
+                        <div style="display: flex; justify-content: center;">
+                            <button style="font-size: 7px; border-radius: 10px; padding: 5px 10px; margin-right: 5px;" onclick="window.location.href='/De/<%= clothe.code%>'">Eliminar</button>
+                            <button style="font-size: 7px; border-radius: 10px; padding: 5px 10px;" onclick="window.location.href='/<%= clothe.code%>'">Editar</button>
+                        </div>
+                        
+                    </div>
+                <% }); %>
+            </div>
             
+
+        </div>
                         
             </div>
 
@@ -92,79 +118,6 @@
             </div>
     </div>
 
-
-
-
-
-
-    <div data-role="page" id="bar" data-theme="b">
-        <div data-role="header">
-            <h1>NefSports</h1>
-            <div data-role="navbar">
-                <ul>
-                    <li><a href="#foo" data-icon="home">Insertar Jerseys</a></li>
-                    <li><a href="#bar" data-icon="eye" class="ui-btn-active">Nuestros Productos</a></li>
-                </ul>
-                          
-            </div>
-        </div>
-
-
-
-        <div role="main" class="ui-content">
-
-            <div class="product-row" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-                <% clothes.forEach((clothe) => { %>
-                    <div class="product-item" style="width:45%; margin-bottom: 20px; font-size: 11px; border-radius: 15px; background-color: rgb(194, 158, 206); color: #000; text-align: center; position: relative;">
-                        <img style="width: 100px; border-radius: 5px; height: 85px; margin-bottom: 10px;" src="<%= clothe.urlImg %>" alt="<%= clothe.description %>">
-                        <p style="line-height: 1;">Equipo: <%= clothe.team %></p>
-                        <p style="line-height: 1;">Precio: $<%= clothe.price.toFixed(2) %></p>
-                        <p style="line-height: 1;">Talla: <%= clothe.size %></p>
-                        <p style="line-height: 1;">Color: <%= clothe.color %></p>
-                        <p style="line-height: 1;">Existencia: <%= clothe.stock %></p>
-                        <p style="line-height: 1;">Temporada: <%= clothe.season %></p>
-                        <p style="line-height: 1;">Activo: <%= clothe.status === 1 ? 'Sí' : 'No' %></p>
-                        <div style="display: flex; justify-content: center;">
-                            <button style="font-size: 7px; border-radius: 10px; padding: 5px 10px; margin-right: 5px;" onclick="window.location.href='/De/<%= clothe.code%>'">Eliminar</button>
-                            <button style="font-size: 7px; border-radius: 10px; padding: 5px 10px;" onclick="window.location.href='/<%= clothe.code%>'">Editar</button>
-                        </div>
-                        
-                    </div>
-                <% }); %>
-            </div>
-            
-
-        </div>
-        <div data-role="footer" style="text-align: center;">
-            <h5>Developed by NeftaSiu</h5>
-        
-            <!-- Contenedor para centrar los enlaces -->
-            <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-
-                <a href="https://www.facebook.com/profile.php?id=100008252550294" target="_blank">
-                    <img src="https://img.shields.io/badge/Facebook-1877F2?logo=facebook&logoColor=fff&style=flat"
-                        alt="Facebook Badge">
-                </a>
-        
-                <!-- Enlace a GitHub -->
-                <a href="https://github.com/Nefta11" target="_blank">
-                    <img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=fff&style=flat" alt="GitHub Badge">
-                </a>
-        
-                <!-- Enlace a Instagram -->
-                <a href="https://www.instagram.com/nefth_07/" target="_blank">
-                    <img src="https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=fff&style=flat" alt="Instagram Badge">
-                </a>
-                
-                <a href="mailto:neftaliarturohernandez@gmail.com" target="_blank">
-                    <img src="https://img.shields.io/badge/Gmail-EA4335?logo=gmail&logoColor=fff&style=flat" alt="Gmail Badge">
-                </a>
-            </div>
-            <div class="footer-bottom" style="text-align: center; margin-top: 10px;">
-                <p>&copy; 2024 NeftSports. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </div><!-- /page -->
 
 </body>
 
