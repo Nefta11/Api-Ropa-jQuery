@@ -111,10 +111,9 @@
         <div role="main" class="ui-content">
 
             <div class="product-row" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-
                 <% clothes.forEach((clothe) => { %>
-                    <div class="product-item" style="width: 30%; margin-bottom: 20px;  font-size: 10px; background-color: rgb(189, 187, 185); color: #000;">
-                        <img style="width: 100px; height: 85px; margin-bottom: 10px;" src="<%= clothe.urlImg %>" alt="<%= clothe.description %>">
+                    <div class="product-item" style="width:45%; margin-bottom: 20px; font-size: 10px; border-radius: 15px; background-color: rgb(194, 158, 206); color: #000; text-align: center; position: relative;">
+                        <img style="width: 100px; border-radius: 10px; height: 85px; margin-bottom: 10px;" src="<%= clothe.urlImg %>" alt="<%= clothe.description %>">
                         <p style="line-height: 1;">Equipo: <%= clothe.team %></p>
                         <p style="line-height: 1;">Precio: $<%= clothe.price.toFixed(2) %></p>
                         <p style="line-height: 1;">Talla: <%= clothe.size %></p>
@@ -122,12 +121,15 @@
                         <p style="line-height: 1;">Existencia: <%= clothe.stock %></p>
                         <p style="line-height: 1;">Fecha de lanzamiento: <%= clothe.releaseDate %></p>
                         <p style="line-height: 1;">Activo: <%= clothe.status === 1 ? 'Sí' : 'No' %></p>
-                        <a href="#" class="btn-comprar">Comprar</a>
+                        <div style="display: flex; justify-content: center;">
+                            <button style="font-size: 7px; border-radius: 10px; padding: 5px 10px; margin-right: 5px;" href="/De/<%= clothe.code%>" >Eliminar</button>
+                            <button style="font-size: 7px; border-radius: 10px; padding: 5px 10px;" href="/<%= clothe.code%>" >Editar</button>
+                        </div>
                     </div>
                 <% }); %>
-                
-
             </div>
+            
+
         </div>
         <div data-role="footer" style="text-align: center;">
             <h5>Developed by NeftaSiu</h5>
