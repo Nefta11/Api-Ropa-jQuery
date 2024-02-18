@@ -6,8 +6,9 @@ import ejs from "ejs";
 import clothesRouter from './routes/clothes.routes.js'
 const app = express();
 
+//Cargar archivos estaticos 
 
-app.use(express.static('public'));
+app.use(express.static('./public'));
 
 // Configuración del motor de vistas
 app.set('view engine', 'ejs');

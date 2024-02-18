@@ -14,7 +14,7 @@
 <body>
 
     <!-- Inicio de la primera página -->
-    <div data-role="page" id="foo">
+    <div data-role="page" id="foo" data-theme="b">
 
         <div data-role="header">
             <h1>NefSports</h1>
@@ -84,7 +84,7 @@
 
 
 
-    <div data-role="page" id="bar">
+    <div data-role="page" id="bar" data-theme="b">
         <div data-role="header">
             <h1>NefSports</h1>
             <div data-role="navbar">
@@ -101,14 +101,14 @@
 
         <div role="main" class="ui-content">
 
-            <div class="product-row">
+            <div class="product-row" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
 
                 <% clothes.forEach((clothe) => { %>
-                    <div class="product-item" style="background-color: #9370DB;">
-                        <img src="<%= clothe.urlImg %>" alt="<%= clothe.description %>">
+                    <div class="product-item" style="width: 30%; margin-bottom: 20px; text-align: center;">
+                        <img style="max-width: 100%; height: auto; margin-bottom: 10px;" src="<%= clothe.urlImg %>" alt="<%= clothe.description %>">
                         <h3><%= clothe.code %></h3>
                         <p>Equipo: <%= clothe.team %></p>
-                        <p>Precio de compra: $<%= clothe.price.toFixed(2) %></p>
+                        <p>Precio: $<%= clothe.price.toFixed(2) %></p>
                         <p>Talla: <%= clothe.size %></p>
                         <p>Color: <%= clothe.color %></p>
                         <p>Existencia: <%= clothe.stock %></p>
