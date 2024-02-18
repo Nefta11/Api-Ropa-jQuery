@@ -11,7 +11,7 @@ const clothesSchema = new Schema({
         required: true
     },
     price: Number,
-    size:Number,
+    size:String,
     color: String,
     stock: Number,
     releaseDate: String,

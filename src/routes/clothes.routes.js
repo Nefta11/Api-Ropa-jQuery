@@ -5,9 +5,9 @@ const router = Router();
 
 // Rutas sin un prefijo específico
 router.get('/', getAll);
-router.get('/:barcode', getOne);
+router.get('/:code', getOne);
 router.post('/', insertClothe);
-router.post('/:barcode', updateClothe);
+router.post('/:code', updateClothe);
 router.get('/De/:barcode', deleteClothe);
 
 export default router;
