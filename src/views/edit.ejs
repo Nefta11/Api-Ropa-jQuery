@@ -36,18 +36,18 @@
                 <h4>
                     <%= clothe.team %>
                 </h4>
-                <input type="text" name="urlImg" placeholder="URL de la imagen" value="<%= product.urlImg %>">
-                <input type="text" name="code" placeholder="Código de barras" value="<%= product.code %>">
-                <input type="text" name="team" placeholder="Equipo" value="<%= product.team %>">
-                <input type="number" name="price" placeholder="Precio de compra" value="<%= product.price %>">
-                <input type="text" name="size" placeholder="Talla" value="<%= product.size %>">
-                <input type="text" name="color" placeholder="Color" value="<%= product.color %>">
-                <input type="number" name="stock" placeholder="Existencia" value="<%= product.stock %>">
-                <input type="text" name="season" placeholder="Temporada" value="<%= product.season %>">
+                <input type="text" name="urlImg" placeholder="URL de la imagen" value="<%= clothe.urlImg %>">
+                <input type="text" name="code" placeholder="Código de barras" value="<%= clothe.code %>">
+                <input type="text" name="team" placeholder="Equipo" value="<%= clothe.team %>">
+                <input type="number" name="price" placeholder="Precio de compra" value="<%= clothe.price %>">
+                <input type="text" name="size" placeholder="Talla" value="<%= clothe.size %>">
+                <input type="text" name="color" placeholder="Color" value="<%= clothe.color %>">
+                <input type="number" name="stock" placeholder="Existencia" value="<%= clothe.stock %>">
+                <input type="text" name="season" placeholder="Temporada" value="<%= clothe.season %>">
                 <label for="flip-2">Activo:</label>
                 <select name="status" id="flip-2" data-role="slider">
-                    <option value="0" <%= product.status === 0 ? "selected" : "" %>>No</option>
-                    <option value="1" <%= product.status === 1 ? "selected" : "" %>>Sí</option>
+                    <option value="0" <%= clothe.status === 0 ? "selected" : "" %>>No</option>
+                    <option value="1" <%= clothe.status === 1 ? "selected" : "" %>>Sí</option>
                 </select>
                 <button type="submit" id="submit-6" class="ui-shadow ui-btn ui-corner-all ui-mini">Actualizar</button>
         
