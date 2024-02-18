@@ -24,8 +24,8 @@ export const getOne = (req, res) => {
 }
 
 //Nos muestra todos los elementos disponibles en la BD
-export const insertProduct = (req, res) => {
-    ClotheDAO.insertProduct(req.body)
+export const insertClothe = (req, res) => {
+    ClotheDAO.insertClothe(req.body)
         .then(result => {
             if (result)
             res.redirect('/')
@@ -34,8 +34,8 @@ export const insertProduct = (req, res) => {
 };
 
 
-export const updateProduct = (req, res) => {
-    ClotheDAO.updateProduct(req.params.code, req.body)
+export const updateClothe = (req, res) => {
+    ClotheDAO.updateClothe(req.params.code, req.body)
 
         .then(product => {
             if (product)
@@ -53,8 +53,8 @@ export const updateProduct = (req, res) => {
 };
 
 
-export const deleteProduct = (req, res) => {
-    ClotheDAO.delteProduct(req.params.code)
+export const deleteClothe = (req, res) => {
+    ClotheDAO.deleteClothe(req.params.code)
 
         .then(clothe => {
             if (clothe)
