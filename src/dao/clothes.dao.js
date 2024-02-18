@@ -11,7 +11,7 @@ ClotheDAO.getOne = async (cd) => {
     return clothe
 };
 
-ClotheDAO.insertClothe = async (clothe) => {
+ClotheDAO.insertClothe -= async (clothe) => {
     const clotheSaved = new Clothe(clothe);
     clotheSaved.save();
     return true;
