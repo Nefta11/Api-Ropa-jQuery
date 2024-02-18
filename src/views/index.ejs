@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" href="/src/public/css/style.css">
 </head>
 
 <body>
@@ -31,7 +31,7 @@
 
         <div role="main" class="ui-content">
             <div id="logo-container">
-                <img src="/src/imagenes/logo.jpeg" alt="Logo de NeftSports">
+                <img src="/src/public/imagenes/logo.jpeg" alt="Logo de NeftSports">
             </div>
             <section id="about-us">
                 <h2>Sobre Nosotros</h2>
@@ -103,13 +103,21 @@
 
             <div class="product-row">
 
-                <div class="product-item" style="background-color: #9370DB;">
-                    <img src="/src/imagenes/siuu.jpg" alt="Producto 1">
-                    <h3>Nombre del Producto 1</h3>
-                    <p>Descripción corta del Producto 1.</p>
-                    <p>Precio: $XX.XX</p>
-                    <a href="#" class="btn-comprar">Comprar</a>
-                </div>
+                <% clothes.forEach((clothe) => { %>
+                    <div class="product-item" style="background-color: #9370DB;">
+                        <img src="<%= clothe.urlImg %>" alt="<%= clothe.description %>">
+                        <h3><%= clothe.code %></h3>
+                        <p>Equipo: <%= clothe.team %></p>
+                        <p>Precio de compra: $<%= clothe.price.toFixed(2) %></p>
+                        <p>Talla: <%= clothe.size %></p>
+                        <p>Color: <%= clothe.color %></p>
+                        <p>Existencia: <%= clothe.stock %></p>
+                        <p>Fecha de lanzamiento: <%= clothe.releaseDate %></p>
+                        <p>Activo: <%= clothe.status === 1 ? 'Sí' : 'No' %></p>
+                        <a href="#" class="btn-comprar">Comprar</a>
+                    </div>
+                <% }); %>
+                
 
             </div>
         </div>

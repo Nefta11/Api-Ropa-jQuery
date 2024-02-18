@@ -7,6 +7,8 @@ import clothesRouter from './routes/clothes.routes.js'
 const app = express();
 
 
+app.use(express.static('public'));
+
 // Configuración del motor de vistas
 app.set('view engine', 'ejs');
 
@@ -14,7 +16,7 @@ app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan('dev'));
-app.use(express.static('css')); // Reemplaza 'public' con tu carpeta de archivos estáticos
+app.use(express.static('src'));
 
 
 app.use(clothesRouter);
