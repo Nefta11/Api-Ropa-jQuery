@@ -7,7 +7,6 @@ import clothesRouter from './routes/clothes.routes.js'
 const app = express();
 
 //Cargar archivos estaticos 
-
 app.use(express.static('./public'));
 
 // Configuración del motor de vistas
